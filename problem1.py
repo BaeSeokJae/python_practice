@@ -5,6 +5,7 @@ import time
 from num2words import num2words
 import datetime as dt
 
+# 시간측정함수를 장식하는 코드
 def logging_time(original_fn):
     def wrapper_fn(*args, **kwargs):
         start_time = time.time()
@@ -13,6 +14,7 @@ def logging_time(original_fn):
         print("WorkingTime[{}]: {} sec".format(original_fn.__name__, end_time-start_time))
         return result
     return wrapper_fn
+
 
 # 1번 문제
 def problem1(arg):
@@ -23,6 +25,7 @@ def problem1(arg):
     return sum;
 
 # print(problem1(1000))
+
 
 # 2번 문제
 def problem2(arg):
